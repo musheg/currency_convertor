@@ -16,7 +16,6 @@ class CurrencyExchangeView(TemplateView):
         return context
 
     def post(self, request, *args, **kwargs):
-        print(request.POST)
         from_currencies = request.POST.getlist("from_currencies")
         to_currencies = request.POST.getlist("to_currencies")
         # TODO: validate date format coming from the form
